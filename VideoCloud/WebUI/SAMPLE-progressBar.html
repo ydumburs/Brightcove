@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>sample</title>
+    <meta charset="utf-8" />
+    <title>sample</title>
 </head>
 <body>
 
-    <h1><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html" target="_blank">Brightcove Player API Documentation</a></h1>
-        
-    <video-js id="myPlayerID"
-        data-video-id="6144294684001"
-        data-account="5859975724001"
-        data-player="default"
-        data-embed="default"
-        data-application-id
-        class="video-js"
-        controls>
+    <h1><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html#bufferedPercent" target="_blank">Brightcove Player API - bufferedPercent()</a></h1>
+
+    <video-js id="myPlayerID" data-video-id="6144294684001" data-account="5859975724001" data-player="default" data-embed="default" data-application-id class="video-js" controls>
     </video-js>
     <script src="https://players.brightcove.net/5859975724001/default_default/index.min.js"></script>
 
@@ -37,7 +30,7 @@
         // Update progress bar
         function updateProgress() {
             // Get the percent of the video that's been downloaded
-            percent = parseInt(100*myPlayer.bufferedPercent(), 10);
+            percent = parseInt(100 * myPlayer.bufferedPercent(), 10);
             document.getElementById("myProgress").value = percent;
             document.getElementById("myProgress").innerText = percent + "%";
             document.getElementById("myPercent").innerText = percent + "%";
@@ -45,7 +38,7 @@
 
             // Repeat until it reaches maximun
             if (percent == 100) {
-            clearInterval(intervalID);
+                clearInterval(intervalID);
             }
         }
     </script>
@@ -54,4 +47,3 @@
 
 </body>
 </html>
-
